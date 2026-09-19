@@ -1,18 +1,3 @@
-// =============================================================================
-// BÀI TẬP 03 - Giao diện "Quà của Vinh (7)" (mô phỏng màn hình MoMo)
-//
-// Cách chạy:
-//   1. Tạo project:   flutter create bai05_layout
-//   2. Chép toàn bộ nội dung file này đè lên  lib/main.dart
-//   3. flutter run
-//
-// Kiến thức sử dụng (theo tài liệu Bài 05):
-//   - Scaffold + AppBar (leading, title, actions)
-//   - ListView ngang (scrollDirection: Axis.horizontal) cho thanh bộ lọc
-//   - ListView.builder cho danh sách thẻ quà
-//   - Lớp model (giống DeTai) + widget riêng cho từng item (giống DeTaiItem)
-//   - AlertDialog khi bấm nút "Dùng ngay" / "Thu thập"
-// =============================================================================
 
 import 'package:flutter/material.dart';
 
@@ -218,12 +203,13 @@ class _MyGiftScreenState extends State<MyGiftScreen> {
     );
   }
 
-  // ------------------------------------------ Hai thẻ tóm tắt: Xu + Thẻ quà ---
+  //  Hai thẻ tóm tắt: Xu + Thẻ quà ---
   Widget _buildTheTomTat() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(12, 12, 12, 6),
       child: Row(
         children: [
+        // sử dụng Row và 2 expanded để chia thành 2 
           // --- Thẻ "Đang có 1.955 Xu"
           Expanded(
             child: Container(
